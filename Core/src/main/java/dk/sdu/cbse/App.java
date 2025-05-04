@@ -7,7 +7,6 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("AsteroidsFX");
-        // TODO: set up your Scene, load FXML, etc.
         primaryStage.show();
     }
 
