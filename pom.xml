@@ -11,6 +11,14 @@
     <name>AsteroidsFX</name>
 
     <modules>
+        <module>Common</module>
+        <module>CommonBullet</module>
+        <module>CommonAsteroids</module>
+        <module>Player</module>
+        <module>Enemy</module>
+        <module>Asteroids</module>
+        <module>Collision</module>
+        <module>Bullet</module>
         <module>Core</module>
     </modules>
 
@@ -74,7 +82,7 @@
                     <arguments>
                         <argument>--module-path=mods-mvn</argument>
                         <argument>--class-path=libs/*</argument>
-                        <argument>--module=Core/dk.sdu.cbse.App</argument>
+                        <argument>--module=Core/dk.sdu.cbse.core.App</argument>
                         <argument>--add-modules=javafx.graphics,javafx.controls,javafx.base</argument>
                     </arguments>
                 </configuration>

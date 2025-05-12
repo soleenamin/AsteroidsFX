@@ -1,4 +1,4 @@
-package dk.sdu.cbse;
+package dk.sdu.cbse.core;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

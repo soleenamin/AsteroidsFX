@@ -1,5 +1,14 @@
 module Core {
+    requires Common;
+    requires CommonBullet;
     requires javafx.graphics;
-    exports dk.sdu.cbse;
-}
+    requires javafx.controls;
+    requires Enemy;
 
+    // allow JavaFX to reflectively construct your main class
+    opens dk.sdu.cbse.core to javafx.graphics, javafx.fxml;
+
+    uses dk.sdu.cbse.common.services.IGamePluginService;
+    uses dk.sdu.cbse.common.services.IEntityProcessingService;
+    uses dk.sdu.cbse.common.services.IPostEntityProcessingService;
+}
