@@ -24,6 +24,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 import dk.sdu.cbse.enemysystem.Enemy;
 import javafx.scene.paint.Color;
+import dk.sdu.cbse.mapsystem.Background;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
 
 public class App extends Application {
 
@@ -34,6 +38,8 @@ public class App extends Application {
     private Text destroyedText;
     private List<IEntityProcessingService> entityProcessors;
     private List<IPostEntityProcessingService> postProcessors;
+    private ImageView backgroundView;
+
 
     public static void main(String[] args) {
         launch(App.class);
@@ -81,6 +87,18 @@ public class App extends Application {
         for (IGamePluginService iGamePlugin : getPluginServices()) {
             iGamePlugin.start(gameData, world);
         }
+
+        // load & show the background image
+        world.getEntities(Background.class).stream().findFirst().ifPresent(e -> {
+            String url = ((Background)e).getImagePath();
+            Image img = new Image(url);
+            backgroundView = new ImageView(img);
+            backgroundView.setFitWidth(gameData.getDisplayWidth());
+            backgroundView.setFitHeight(gameData.getDisplayHeight());
+            // add it *behind* everything else
+            gameWindow.getChildren().add(0, backgroundView);
+        });
+
         for (Entity entity : world.getEntities()) {
             Polygon polygon = new Polygon(entity.getPolygonCoordinates());
             polygons.put(entity, polygon);
@@ -144,10 +162,12 @@ public class App extends Application {
                 polygon = new Polygon(entity.getPolygonCoordinates());
                 polygons.put(entity, polygon);
                 gameWindow.getChildren().add(polygon);
-                if (entity instanceof Enemy) {
-                    polygon.setFill(Color.RED);
-                }
             }
+
+            // Color only enemy ships red each frame
+            if (entity instanceof dk.sdu.cbse.enemysystem.Enemy) {
+                polygon.setFill(Color.RED);
+             }
             polygon.setTranslateX(entity.getX());
             polygon.setTranslateY(entity.getY());
             polygon.setRotate(entity.getRotation());

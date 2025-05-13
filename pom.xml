@@ -20,6 +20,7 @@
         <module>Collision</module>
         <module>Bullet</module>
         <module>Core</module>
+        <module>Map</module>
     </modules>
 
     <properties>

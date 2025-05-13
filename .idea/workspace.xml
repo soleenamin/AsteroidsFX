@@ -4,47 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="Lecture 1 - Maven and JPMS setup">
-      <change afterPath="$PROJECT_DIR$/Asteroids/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bullet/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/cbse/bulletsystem/BulletControlSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/cbse/bulletsystem/BulletPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bullet/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Collision/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Collision/src/main/java/dk/sdu/cbse/collisionsystem/CollisionDetector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Collision/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/data/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/data/GameData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/data/GameKeys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/data/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/services/IEntityProcessingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/services/IGamePluginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/services/IPostEntityProcessingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonAsteroids/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonAsteroids/src/main/java/dk/sdu/cbse/common/asteroids/Asteroid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonAsteroids/src/main/java/dk/sdu/cbse/common/asteroids/IAsteroidSplitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonAsteroids/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonBullet/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonBullet/src/main/java/dk/sdu/cbse/common/bullet/Bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonBullet/src/main/java/dk/sdu/cbse/common/bullet/BulletSPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CommonBullet/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Enemy/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Player/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerControlSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Player/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="Exercises from Lecture 2-4">
+      <change afterPath="$PROJECT_DIR$/Map/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/Background.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Map/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/test/java/dk/sdu/cbse/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/test/java/dk/sdu/cbse/core/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="module-info" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -76,28 +46,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bruger/OneDrive/Dokumenter/Komponentbaseret systemer/AsteroidsFX/Common/src/main/java/dk/sdu/cbse&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "temurin-21",
+    "last_opened_file_path": "C:/Users/Bruger/OneDrive/Dokumenter/Komponentbaseret systemer/AsteroidsFX/Map/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Map\src\main\resources" />
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Common\src\main\java\dk\sdu\cbse" />
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX" />
     </key>
@@ -108,6 +79,7 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn clean" />
       <command value="mvn clean install" />
       <command value="mvn exec:exec" />
     </option>
@@ -157,7 +129,8 @@
       <workItem from="1746781475383" duration="892000" />
       <workItem from="1746997353735" duration="2400000" />
       <workItem from="1747060619638" duration="5522000" />
-      <workItem from="1747078453337" duration="328000" />
+      <workItem from="1747078453337" duration="8025000" />
+      <workItem from="1747168565765" duration="2676000" />
     </task>
     <task id="LOCAL-00001" summary="Lecture 1 - Maven and JPMS setup">
       <option name="closed" value="true" />
@@ -175,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746371289603</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Exercises from Lecture 2-4">
+      <option name="closed" value="true" />
+      <created>1747088557417</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747088557417</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +175,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lecture 1 - Maven and JPMS setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lecture 1 - Maven and JPMS setup" />
+    <MESSAGE value="Exercises from Lecture 2-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercises from Lecture 2-4" />
   </component>
 </project>

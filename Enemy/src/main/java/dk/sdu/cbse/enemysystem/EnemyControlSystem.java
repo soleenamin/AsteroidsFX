@@ -15,12 +15,14 @@ import java.util.ServiceLoader;
 public class EnemyControlSystem implements IEntityProcessingService {
     private final Random rnd = new Random();
     private static final double SPEED = 1.0;
+    private static final double ROTATION_VARIANCE = 1.0;
+
 
     @Override
     public void process(GameData gameData, World world) {
         for (Entity en : world.getEntities(Enemy.class)) {
-            // randomly tweak rotation a bit each frame
-            double rot = en.getRotation() + (rnd.nextDouble() - 0.5) * 10;
+
+            double rot = en.getRotation() + (rnd.nextDouble() - 0.5) * ROTATION_VARIANCE;
             en.setRotation(rot);
 
             // thrust forward
