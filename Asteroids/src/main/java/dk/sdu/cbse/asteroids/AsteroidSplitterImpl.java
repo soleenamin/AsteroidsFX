@@ -20,7 +20,7 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
 
         // only split if the rock is big enough
         if (parentRadius < 6) {
-            // too small—just destroy it without spawning children
+            // too small just destroy it without spawning children
             world.removeEntity(parent);
             return;
         }

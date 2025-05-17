@@ -5,6 +5,8 @@ module Core {
     requires javafx.controls;
     requires Enemy;
     requires Map;
+    requires CommonAsteroids;
+    requires Player;
 
     // allow JavaFX to reflectively construct your main class
     opens dk.sdu.cbse.core to javafx.graphics, javafx.fxml;

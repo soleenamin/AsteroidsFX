@@ -1,4 +1,5 @@
 module Player {
+    exports dk.sdu.cbse.playersystem;
     requires Common;
     requires CommonBullet;
     uses dk.sdu.cbse.common.services.IGamePluginService;

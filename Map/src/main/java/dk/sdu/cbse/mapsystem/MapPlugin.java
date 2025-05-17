@@ -6,7 +6,7 @@ import dk.sdu.cbse.common.data.World;
 import dk.sdu.cbse.common.services.IGamePluginService;
 
 /**
- * On game start, injects a Background entity referencing the image file.
+ * On game start, makes a Background entity referencing the image file.
  */
 public class MapPlugin implements IGamePluginService {
     @Override
@@ -14,7 +14,7 @@ public class MapPlugin implements IGamePluginService {
         // load galaxy.jpg from the classpath
         String path = getClass()
                 .getClassLoader()
-                .getResource("galaxyy.jpg")
+                .getResource("galaxy.jpg")
                 .toExternalForm();
 
         Background bg = new Background(path);

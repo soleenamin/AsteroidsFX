@@ -21,14 +21,14 @@ public class PlayerControlSystem implements IEntityProcessingService {
             if (gameData.getKeys().isDown(GameKeys.RIGHT)) {
                 e.setRotation(e.getRotation() + 5);
             }
-            // thrust
+
             if (gameData.getKeys().isDown(GameKeys.UP)) {
                 double dx = Math.cos(Math.toRadians(e.getRotation()));
                 double dy = Math.sin(Math.toRadians(e.getRotation()));
                 e.setX(e.getX() + dx);
                 e.setY(e.getY() + dy);
             }
-            // fire
+
             if (gameData.getKeys().isDown(GameKeys.SPACE)) {
                 ServiceLoader
                         .load(BulletSPI.class)
@@ -38,7 +38,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
                             world.addEntity(b);
                         });
             }
-            // wrap around screen
+
             wrap(e, gameData);
         }
     }

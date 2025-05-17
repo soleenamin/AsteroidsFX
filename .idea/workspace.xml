@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="Exercises from Lecture 2-4">
-      <change afterPath="$PROJECT_DIR$/Map/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/Background.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Map/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="Exercises from Lecture 2-4; Enemy and Map added">
+      <change afterPath="$PROJECT_DIR$/Map/src/main/resources/galaxy.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map/src/main/resources/galaxyy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,31 +44,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "temurin-21",
-    "last_opened_file_path": "C:/Users/Bruger/OneDrive/Dokumenter/Komponentbaseret systemer/AsteroidsFX/Map/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bruger/OneDrive/Dokumenter/Komponentbaseret systemer/AsteroidsFX/Map/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Map\src\main\resources" />
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Common\src\main\java\dk\sdu\cbse" />
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Map\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dk.sdu.cbse.services" />
@@ -130,7 +131,14 @@
       <workItem from="1746997353735" duration="2400000" />
       <workItem from="1747060619638" duration="5522000" />
       <workItem from="1747078453337" duration="8025000" />
-      <workItem from="1747168565765" duration="2676000" />
+      <workItem from="1747168565765" duration="3173000" />
+      <workItem from="1747204742639" duration="1478000" />
+      <workItem from="1747233445821" duration="106000" />
+      <workItem from="1747234991794" duration="595000" />
+      <workItem from="1747238470887" duration="1194000" />
+      <workItem from="1747249431174" duration="15000" />
+      <workItem from="1747293500121" duration="14000" />
+      <workItem from="1747436339983" duration="1433000" />
     </task>
     <task id="LOCAL-00001" summary="Lecture 1 - Maven and JPMS setup">
       <option name="closed" value="true" />
@@ -156,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747088557417</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Exercises from Lecture 2-4; Enemy and Map added">
+      <option name="closed" value="true" />
+      <created>1747171732794</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747171732794</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +192,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lecture 1 - Maven and JPMS setup" />
     <MESSAGE value="Exercises from Lecture 2-4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercises from Lecture 2-4" />
+    <MESSAGE value="Exercises from Lecture 2-4; Enemy and Map added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercises from Lecture 2-4; Enemy and Map added" />
   </component>
 </project>

@@ -1,5 +1,7 @@
 package dk.sdu.cbse.core;
 
+import dk.sdu.cbse.common.asteroids.Asteroid;
+import dk.sdu.cbse.common.bullet.Bullet;
 import dk.sdu.cbse.common.data.Entity;
 import dk.sdu.cbse.common.data.GameData;
 import dk.sdu.cbse.common.data.GameKeys;
@@ -12,6 +14,8 @@ import java.util.Map;
 import java.util.ServiceLoader;
 import java.util.concurrent.ConcurrentHashMap;
 import static java.util.stream.Collectors.toList;
+
+import dk.sdu.cbse.playersystem.Player;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -49,6 +53,8 @@ public class App extends Application {
     public void start(Stage window) throws Exception {
         // initialize the counter text as a field instead
         destroyedText = new Text(10, 20, "Destroyed asteroids: 0");
+        destroyedText.setFill(Color.LIGHTYELLOW);
+
         gameWindow.setPrefSize(gameData.getDisplayWidth(), gameData.getDisplayHeight());
         gameWindow.getChildren().add(destroyedText);
 
@@ -164,15 +170,28 @@ public class App extends Application {
                 gameWindow.getChildren().add(polygon);
             }
 
-            // Color only enemy ships red each frame
-            if (entity instanceof dk.sdu.cbse.enemysystem.Enemy) {
+            // Color only enemy ship red
+            if (entity instanceof Enemy) {
                 polygon.setFill(Color.RED);
              }
+
+            // Color Asteroids grey
+            if (entity instanceof Asteroid) {
+                polygon.setFill(Color.LIGHTGREY);
+            }
+
+            if (entity instanceof Player) {
+                polygon.setFill(Color.LIGHTPINK);
+            }
+
+            if (entity instanceof Bullet) {
+                polygon.setFill(Color.GRAY);
+            }
             polygon.setTranslateX(entity.getX());
             polygon.setTranslateY(entity.getY());
             polygon.setRotate(entity.getRotation());
         }
-     //update the counter each frame
+     //update the counter when player destroys an asteroid
        destroyedText.setText("Destroyed asteroids: " + gameData.getDestroyedAsteroids());
 
     }
