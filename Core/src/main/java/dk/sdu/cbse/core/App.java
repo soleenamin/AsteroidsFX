@@ -9,9 +9,8 @@ import dk.sdu.cbse.common.data.World;
 import dk.sdu.cbse.common.services.IEntityProcessingService;
 import dk.sdu.cbse.common.services.IGamePluginService;
 import dk.sdu.cbse.common.services.IPostEntityProcessingService;
-import java.util.Collection;
-import java.util.Map;
-import java.util.ServiceLoader;
+
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import static java.util.stream.Collectors.toList;
 
@@ -24,7 +23,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import java.util.List;
+
 import java.util.stream.Collectors;
 import dk.sdu.cbse.enemysystem.Enemy;
 import javafx.scene.paint.Color;
@@ -110,19 +109,8 @@ public class App extends Application {
             polygons.put(entity, polygon);
             gameWindow.getChildren().add(polygon);
         }
-        // load & cache all IEntityProcessingService implementations once
-        entityProcessors = ServiceLoader
-                .load(IEntityProcessingService.class)
-                .stream()
-                .map(ServiceLoader.Provider::get)
-                .collect(Collectors.toList());
-
-// load & cache all IPostEntityProcessingService implementations once
-        postProcessors = ServiceLoader
-                .load(IPostEntityProcessingService.class)
-                .stream()
-                .map(ServiceLoader.Provider::get)
-                .collect(Collectors.toList());
+        entityProcessors = new ArrayList<>(getEntityProcessingServices());
+        postProcessors = new ArrayList<>(getPostEntityProcessingServices());
 
         render();
         window.setScene(scene);
@@ -200,4 +188,11 @@ public class App extends Application {
         return ServiceLoader.load(IGamePluginService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
     }
 
+ private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
+    return ServiceLoader.load(IEntityProcessingService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
+}
+
+    private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
+        return ServiceLoader.load(IPostEntityProcessingService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
+    }
 }

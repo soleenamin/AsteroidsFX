@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class AsteroidSpawner implements IEntityProcessingService {
     private static final long SPAWN_INTERVAL_MS = 3000;
-    private final Random rnd = new Random();
+    private final Random random = new Random();
     private long lastSpawn = System.currentTimeMillis();
 
     @Override
@@ -25,20 +25,20 @@ public class AsteroidSpawner implements IEntityProcessingService {
         lastSpawn = now;
         // create & position a new asteroid
         Asteroid a = new Asteroid();
-        int size = rnd.nextInt(10) + 5;
+        int size = random.nextInt(10) + 5;
         a.setRadius(size);
         a.setPolygonCoordinates(size, -size, -size, -size, -size, size, size, size);
 
         // pick a random edge to spawn on
         double w = gameData.getDisplayWidth();
         double h = gameData.getDisplayHeight();
-        switch (rnd.nextInt(4)) {
-            case 0: a.setX(rnd.nextDouble() * w); a.setY(0); break;             // top
-            case 1: a.setX(rnd.nextDouble() * w); a.setY(h); break;             // bottom
-            case 2: a.setX(0);                  a.setY(rnd.nextDouble() * h); break; // left
-            default:a.setX(w);                  a.setY(rnd.nextDouble() * h);     // right
+        switch (random.nextInt(4)) {
+            case 0: a.setX(random.nextDouble() * w); a.setY(0); break;             // top
+            case 1: a.setX(random.nextDouble() * w); a.setY(h); break;             // bottom
+            case 2: a.setX(0);                  a.setY(random.nextDouble() * h); break; // left
+            default:a.setX(w);                  a.setY(random.nextDouble() * h);     // right
         }
-        a.setRotation(rnd.nextInt(360));
+        a.setRotation(random.nextInt(360));
         world.addEntity(a);
     }
 }

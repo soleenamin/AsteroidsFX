@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="Exercises from Lecture 2-4; Enemy and Map added">
-      <change afterPath="$PROJECT_DIR$/Map/src/main/resources/galaxy.jpg" afterDir="false" />
+    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="Exercises from Lecture 5 exercise">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSpawner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map/src/main/resources/galaxyy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +97,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -139,6 +135,16 @@
       <workItem from="1747249431174" duration="15000" />
       <workItem from="1747293500121" duration="14000" />
       <workItem from="1747436339983" duration="1433000" />
+      <workItem from="1747839091403" duration="50000" />
+      <workItem from="1747906970704" duration="776000" />
+      <workItem from="1747910774462" duration="7000" />
+      <workItem from="1748114254736" duration="3760000" />
+      <workItem from="1748126793299" duration="785000" />
+      <workItem from="1748349845404" duration="4156000" />
+      <workItem from="1748377838585" duration="3785000" />
+      <workItem from="1748417393809" duration="2016000" />
+      <workItem from="1748443792018" duration="1692000" />
+      <workItem from="1748469205201" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="Lecture 1 - Maven and JPMS setup">
       <option name="closed" value="true" />

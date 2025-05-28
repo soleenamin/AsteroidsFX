@@ -11,7 +11,7 @@ import java.util.Random;
  * Splits a large asteroid into two smaller ones when it gets hit.
  */
 public class AsteroidSplitterImpl implements IAsteroidSplitter {
-    private static final Random rnd = new Random();
+    private static final Random random = new Random();
 
     @Override
     public void createSplitAsteroid(Entity e, World world) {
@@ -44,7 +44,7 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
             child.setX(parent.getX());
             child.setY(parent.getY());
             // give it a random spin
-            child.setRotation(rnd.nextInt(360));
+            child.setRotation(random.nextInt(360));
             world.addEntity(child);
         }
 
