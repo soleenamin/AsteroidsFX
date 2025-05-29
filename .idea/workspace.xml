@@ -5,10 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="Exercises from Lecture 5 exercise">
+      <change afterPath="$PROJECT_DIR$/CommonEnemy/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonEnemy/src/main/java/dk/sdu/cbse/common/enemy/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonEnemy/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonMap/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonMap/src/main/java/dk/sdu/cbse/common/map/MapSPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonMap/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonPlayer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonPlayer/src/main/java/dk/sdu/cbse/common/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonPlayer/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/Enemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Map/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/Background.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map/src/main/java/dk/sdu/cbse/mapsystem/MapPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Player/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerControlSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +45,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="package-info" />
         <option value="Class" />
+        <option value="Interface" />
         <option value="module-info" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5

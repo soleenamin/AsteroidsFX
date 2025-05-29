@@ -1,31 +1,39 @@
 package dk.sdu.cbse.mapsystem;
 
-import dk.sdu.cbse.common.data.Entity;
 import dk.sdu.cbse.common.data.GameData;
 import dk.sdu.cbse.common.data.World;
+import dk.sdu.cbse.common.map.MapSPI;
 import dk.sdu.cbse.common.services.IGamePluginService;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
-/**
- * On game start, makes a Background entity referencing the image file.
- */
-public class MapPlugin implements IGamePluginService {
+import java.net.URL;
+
+public class MapPlugin implements IGamePluginService, MapSPI {
+
+    private static ImageView mapView;
+
     @Override
     public void start(GameData gameData, World world) {
-        // load galaxy.jpg from the classpath
-        String path = getClass()
-                .getClassLoader()
-                .getResource("galaxy.jpg")
-                .toExternalForm();
+        // load once on startup
+        URL url = getClass().getResource("/galaxy.jpg");
+        if (url != null) {
+            Image img = new Image(url.toString());
+            mapView = new ImageView(img);
+            mapView.setFitWidth(gameData.getDisplayWidth());
+            mapView.setFitHeight(gameData.getDisplayHeight());
+        } else {
+            System.err.println("No map image found!");
+        }
+    }
 
-        Background bg = new Background(path);
-        bg.setX(0);
-        bg.setY(0);
-        world.addEntity(bg);
+    @Override
+    public ImageView getMap() {
+        return mapView;
     }
 
     @Override
     public void stop(GameData gameData, World world) {
-        world.getEntities(Background.class)
-                .forEach(world::removeEntity);
+        mapView = null;
     }
 }

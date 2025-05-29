@@ -7,6 +7,9 @@ module Core {
     requires Map;
     requires CommonAsteroids;
     requires Player;
+    requires CommonEnemy;
+    requires CommonPlayer;
+    requires CommonMap;
 
     // allow JavaFX to reflectively construct your main class
     opens dk.sdu.cbse.core to javafx.graphics, javafx.fxml;
@@ -14,4 +17,5 @@ module Core {
     uses dk.sdu.cbse.common.services.IGamePluginService;
     uses dk.sdu.cbse.common.services.IEntityProcessingService;
     uses dk.sdu.cbse.common.services.IPostEntityProcessingService;
+    uses dk.sdu.cbse.common.map.MapSPI;
 }

@@ -2,6 +2,8 @@ module Enemy {
     exports dk.sdu.cbse.enemysystem;
     requires Common;
     requires CommonBullet;
+    requires CommonEnemy;
+
 
     uses dk.sdu.cbse.common.services.IGamePluginService;
     uses dk.sdu.cbse.common.services.IEntityProcessingService;

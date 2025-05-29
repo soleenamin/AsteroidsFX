@@ -21,6 +21,9 @@
         <module>Bullet</module>
         <module>Core</module>
         <module>Map</module>
+        <module>CommonPlayer</module>
+        <module>CommonEnemy</module>
+        <module>CommonMap</module>
     </modules>
 
     <properties>

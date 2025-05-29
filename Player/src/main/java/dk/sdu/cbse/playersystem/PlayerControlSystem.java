@@ -5,6 +5,7 @@ import dk.sdu.cbse.common.data.Entity;
 import dk.sdu.cbse.common.data.GameData;
 import dk.sdu.cbse.common.data.GameKeys;
 import dk.sdu.cbse.common.data.World;
+import dk.sdu.cbse.common.player.Player;
 import dk.sdu.cbse.common.services.IEntityProcessingService;
 
 import java.util.ServiceLoader;

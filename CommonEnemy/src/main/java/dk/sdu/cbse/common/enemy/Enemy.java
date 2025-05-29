@@ -1,7 +1,5 @@
-package dk.sdu.cbse.enemysystem;
-
+package dk.sdu.cbse.common.enemy;
 import dk.sdu.cbse.common.data.Entity;
 
 public class Enemy extends Entity {
-    // no extra fields
 }

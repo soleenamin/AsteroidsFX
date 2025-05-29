@@ -6,15 +6,17 @@ import dk.sdu.cbse.common.data.Entity;
 import dk.sdu.cbse.common.data.GameData;
 import dk.sdu.cbse.common.data.GameKeys;
 import dk.sdu.cbse.common.data.World;
+import dk.sdu.cbse.common.enemy.Enemy;
+import dk.sdu.cbse.common.player.Player;
 import dk.sdu.cbse.common.services.IEntityProcessingService;
 import dk.sdu.cbse.common.services.IGamePluginService;
 import dk.sdu.cbse.common.services.IPostEntityProcessingService;
+import dk.sdu.cbse.common.map.MapSPI;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import static java.util.stream.Collectors.toList;
 
-import dk.sdu.cbse.playersystem.Player;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -24,11 +26,7 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.util.stream.Collectors;
-import dk.sdu.cbse.enemysystem.Enemy;
 import javafx.scene.paint.Color;
-import dk.sdu.cbse.mapsystem.Background;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 
@@ -93,16 +91,14 @@ public class App extends Application {
             iGamePlugin.start(gameData, world);
         }
 
-        // load & show the background image
-        world.getEntities(Background.class).stream().findFirst().ifPresent(e -> {
-            String url = ((Background)e).getImagePath();
-            Image img = new Image(url);
-            backgroundView = new ImageView(img);
+        ServiceLoader<MapSPI> mapSPILoader = ServiceLoader.load(MapSPI.class);
+        mapSPILoader.findFirst().ifPresent(mapSPI -> {
+            backgroundView = mapSPI.getMap();
             backgroundView.setFitWidth(gameData.getDisplayWidth());
             backgroundView.setFitHeight(gameData.getDisplayHeight());
-            // add it *behind* everything else
             gameWindow.getChildren().add(0, backgroundView);
         });
+
 
         for (Entity entity : world.getEntities()) {
             Polygon polygon = new Polygon(entity.getPolygonCoordinates());
