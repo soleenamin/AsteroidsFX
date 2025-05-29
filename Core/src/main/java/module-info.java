@@ -11,8 +11,12 @@ module Core {
     requires CommonPlayer;
     requires CommonMap;
 
-    // allow JavaFX to reflectively construct your main class
-    opens dk.sdu.cbse.core to javafx.graphics, javafx.fxml;
+
+    requires spring.core;
+    requires spring.context;
+    requires spring.beans;
+
+    opens dk.sdu.cbse.core to spring.core, spring.beans, javafx.graphics;
 
     uses dk.sdu.cbse.common.services.IGamePluginService;
     uses dk.sdu.cbse.common.services.IEntityProcessingService;

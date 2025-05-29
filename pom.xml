@@ -19,11 +19,11 @@
         <module>Asteroids</module>
         <module>Collision</module>
         <module>Bullet</module>
-        <module>Core</module>
         <module>Map</module>
         <module>CommonPlayer</module>
         <module>CommonEnemy</module>
         <module>CommonMap</module>
+        <module>Core</module>
     </modules>
 
     <properties>
@@ -34,6 +34,32 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Framework -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>6.2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>6.2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>6.2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jcl</artifactId>
+                <version>6.2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>6.2.6</version>
+            </dependency>
             <!-- JavaFX versions centrally managed -->
             <dependency>
                 <groupId>org.openjfx</groupId>
