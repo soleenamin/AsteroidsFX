@@ -10,4 +10,6 @@ module Asteroids {
     provides dk.sdu.cbse.common.services.IEntityProcessingService
             with dk.sdu.cbse.asteroids.AsteroidProcessor,
                     dk.sdu.cbse.asteroids.AsteroidSpawner;
+    provides dk.sdu.cbse.common.asteroids.IAsteroidSplitter with dk.sdu.cbse.asteroids.AsteroidSplitterImpl;
+
 }

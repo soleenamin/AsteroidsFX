@@ -1,15 +1,12 @@
 package dk.sdu.cbse.asteroids;
 
-import dk.sdu.cbse.common.asteroids.IAsteroidSplitter;
 import dk.sdu.cbse.common.asteroids.Asteroid;
+import dk.sdu.cbse.common.asteroids.IAsteroidSplitter;
 import dk.sdu.cbse.common.data.Entity;
 import dk.sdu.cbse.common.data.World;
 
 import java.util.Random;
 
-/**
- * Splits a large asteroid into two smaller ones when it gets hit.
- */
 public class AsteroidSplitterImpl implements IAsteroidSplitter {
     private static final Random random = new Random();
 
@@ -17,38 +14,24 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
     public void createSplitAsteroid(Entity e, World world) {
         Asteroid parent = (Asteroid) e;
         float parentRadius = parent.getRadius();
-
-        // only split if the rock is big enough
-        if (parentRadius < 6) {
-            // too small just destroy it without spawning children
-            world.removeEntity(parent);
-            return;
+        if (parentRadius <= 10) {
+            return; //
         }
-
-        // compute child radius (half the parent’s size)
-        float childRadius = parentRadius / 2f;
-
-        // scale down the parent’s shape
-        double[] coords = parent.getPolygonCoordinates();
-        double[] newCoords = new double[coords.length];
-        for (int i = 0; i < coords.length; i++) {
-            newCoords[i] = coords[i] * 0.5;
-        }
-
-        // spawn two children
         for (int i = 0; i < 2; i++) {
             Asteroid child = new Asteroid();
-            child.setRadius(childRadius);
-            child.setPolygonCoordinates(newCoords);
-            // start at the same position
-            child.setX(parent.getX());
-            child.setY(parent.getY());
-            // give it a random spin
-            child.setRotation(random.nextInt(360));
+            child.setRadius(parentRadius / 2);
+            // Offset the children a bit in different directions
+            double angle = Math.toRadians(random.nextInt(360));
+            double offset = parentRadius / 2.0;
+            child.setX(parent.getX() + Math.cos(angle) * offset);
+            child.setY(parent.getY() + Math.sin(angle) * offset);
+            // Give each child a random rotation (trajectory)
+            child.setRotation((float) (random.nextDouble() * 360));
+            // If you have a setSpeed or velocity, randomize it here too!
             world.addEntity(child);
+            System.out.println("Child asteroid spawned at X=" + child.getX() + ", Y=" + child.getY() + ", radius=" + child.getRadius());
         }
 
-        // finally remove the original parent
-        world.removeEntity(parent);
     }
 }
+
