@@ -1,4 +1,3 @@
-// App.java
 package dk.sdu.cbse.core;
 
 import dk.sdu.cbse.common.asteroids.Asteroid;
