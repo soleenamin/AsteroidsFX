@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="splitting">
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/ModuleConfig.java" afterDir="false" />
+    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="unit testing">
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/ScoringClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ScoringSystem/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ScoringSystem/src/main/java/dk/sdu/cbse/score/ScoringService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ScoringSystem/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ScoringSystem/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/ModuleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/ModuleConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/test/java/dk/sdu/cbse/core/AppTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +31,8 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
-        <option value="module-info" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -57,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "SpringLab",
+    "git-widget-placeholder": "MicroServiceLab",
     "jdk.selected.JAVA_MODULE": "temurin-21",
     "last_opened_file_path": "C:/Users/Bruger/OneDrive/Dokumenter/Komponentbaseret systemer/AsteroidsFX/Map/src/main/resources",
     "node.js.detected.package.eslint": "true",
@@ -65,7 +70,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.44252872",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -79,6 +84,8 @@
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\ScoringSystem" />
+      <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\ScoringSystem\src\main\java" />
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Map\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -92,9 +99,10 @@
       <command value="mvn exec:java -pl Core " />
       <command value="mvn exec:exec" />
       <command value="mvn clean install" />
+      <command value="mvn spring-boot:run " />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.App" />
       <module name="1" />
@@ -108,9 +116,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.core.Main" />
-      <module name="1" />
+      <module name="Core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dk.sdu.cbse.core.*" />
@@ -121,8 +129,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.core.Main" />
+      <module name="AsteroidsFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.sdu.cbse.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoringService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ScoringSystem" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="dk.sdu.cbse.score.ScoringService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
@@ -173,6 +202,7 @@
       <workItem from="1748417393809" duration="2016000" />
       <workItem from="1748443792018" duration="1692000" />
       <workItem from="1748469205201" duration="450000" />
+      <workItem from="1748776060998" duration="2366000" />
     </task>
     <task id="LOCAL-00001" summary="Lecture 1 - Maven and JPMS setup">
       <option name="closed" value="true" />

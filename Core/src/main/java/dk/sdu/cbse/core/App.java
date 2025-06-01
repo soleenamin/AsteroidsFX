@@ -19,6 +19,7 @@ import javafx.scene.text.Text;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+
 import java.util.List;
 import java.util.Map;
 import java.util.ServiceLoader;
@@ -36,19 +37,23 @@ public class App {
     private final List<IGamePluginService> pluginServices;
     private final List<IEntityProcessingService> entityProcessingServices;
     private final List<IPostEntityProcessingService> postEntityProcessingServices;
+    private final ScoringClient scoringClient;
+
+    private int previousDestroyed = 0;
 
     public App(
             List<IGamePluginService> pluginServices,
             List<IEntityProcessingService> entityProcessingServices,
-            List<IPostEntityProcessingService> postEntityProcessingServices
+            List<IPostEntityProcessingService> postEntityProcessingServices,
+            ScoringClient scoringClient
     ) {
         this.pluginServices = pluginServices;
         this.entityProcessingServices = entityProcessingServices;
         this.postEntityProcessingServices = postEntityProcessingServices;
+        this.scoringClient = scoringClient;
     }
 
     public void start(Stage window) {
-        // Counter text
         destroyedText = new Text(10, 20, "Destroyed asteroids: 0");
         destroyedText.setFill(Color.LIGHTYELLOW);
 
@@ -59,10 +64,8 @@ public class App {
         scene.setOnKeyPressed(e -> handleKey(e.getCode(), true));
         scene.setOnKeyReleased(e -> handleKey(e.getCode(), false));
 
-        // start all plugins
         pluginServices.forEach(p -> p.start(gameData, world));
 
-        // load a background map if available
         ServiceLoader.load(MapSPI.class)
                 .findFirst()
                 .ifPresent(m -> {
@@ -72,7 +75,6 @@ public class App {
                     gameWindow.getChildren().add(0, backgroundView);
                 });
 
-        // create initial polygons
         world.getEntities().forEach(e -> {
             Polygon poly = new Polygon(e.getPolygonCoordinates());
             polygons.put(e, poly);
@@ -88,9 +90,9 @@ public class App {
 
     private void handleKey(KeyCode code, boolean pressed) {
         switch (code) {
-            case LEFT  -> gameData.getKeys().setKey(GameKeys.LEFT, pressed);
+            case LEFT -> gameData.getKeys().setKey(GameKeys.LEFT, pressed);
             case RIGHT -> gameData.getKeys().setKey(GameKeys.RIGHT, pressed);
-            case UP    -> gameData.getKeys().setKey(GameKeys.UP, pressed);
+            case UP -> gameData.getKeys().setKey(GameKeys.UP, pressed);
             case SPACE -> gameData.getKeys().setKey(GameKeys.SPACE, pressed);
         }
     }
@@ -109,10 +111,21 @@ public class App {
     private void update() {
         entityProcessingServices.forEach(s -> s.process(gameData, world));
         postEntityProcessingServices.forEach(s -> s.process(gameData, world));
+
+        int destroyedNow = gameData.getDestroyedAsteroids();
+        if (destroyedNow > previousDestroyed) {
+            int diff = destroyedNow - previousDestroyed;
+            try {
+                long newTotal = scoringClient.sendScore(diff * 100); // 100 points per asteroid
+                System.out.println("New total score: " + newTotal);
+            } catch (Exception e) {
+                System.err.println("Failed to send score to scoring service: " + e.getMessage());
+            }
+            previousDestroyed = destroyedNow;
+        }
     }
 
     private void draw() {
-        // remove dead entities
         polygons.keySet().removeIf(e -> {
             if (!world.getEntities().contains(e)) {
                 gameWindow.getChildren().remove(polygons.get(e));
@@ -121,7 +134,6 @@ public class App {
             return false;
         });
 
-        // update or create polygons
         world.getEntities().forEach(e -> {
             Polygon poly = polygons.computeIfAbsent(e, k -> {
                 Polygon p = new Polygon(k.getPolygonCoordinates());
@@ -133,7 +145,7 @@ public class App {
             poly.setTranslateY(e.getY());
             poly.setRotate(e.getRotation());
 
-            if      (e instanceof Enemy)   poly.setFill(Color.RED);
+            if      (e instanceof Enemy)    poly.setFill(Color.RED);
             else if (e instanceof Asteroid) poly.setFill(Color.LIGHTGREY);
             else if (e instanceof Player)   poly.setFill(Color.LIGHTPINK);
             else if (e instanceof Bullet)   poly.setFill(Color.GRAY);

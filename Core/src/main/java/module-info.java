@@ -12,6 +12,7 @@ module Core {
     requires spring.core;
     requires spring.context;
     requires spring.beans;
+    requires spring.web;
 
     opens dk.sdu.cbse.core to spring.core, spring.beans, javafx.graphics;
 

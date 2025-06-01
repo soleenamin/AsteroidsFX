@@ -24,6 +24,7 @@
         <module>CommonEnemy</module>
         <module>CommonMap</module>
         <module>Core</module>
+        <module>ScoringSystem</module>
     </modules>
 
     <properties>

@@ -39,13 +39,19 @@ public class ModuleConfig {
                 .map(ServiceLoader.Provider::get)
                 .collect(Collectors.toList());
     }
+    @Bean
+    public ScoringClient scoringClient() {
+        return new ScoringClient();
+    }
 
     @Bean
     public App app(
             List<IGamePluginService> gamePluginServices,
             List<IEntityProcessingService> entityProcessingServices,
-            List<IPostEntityProcessingService> postEntityProcessingServices
-    ) {
-        return new App(gamePluginServices, entityProcessingServices, postEntityProcessingServices);
+            List<IPostEntityProcessingService> postEntityProcessingServices,
+            ScoringClient scoringClient
+    )
+    {
+        return new App(gamePluginServices, entityProcessingServices, postEntityProcessingServices,scoringClient);
     }
 }
