@@ -32,6 +32,7 @@ public class AsteroidPlugin implements IGamePluginService {
         asteroid.setY(0);
         asteroid.setRadius(size);
         asteroid.setRotation(rnd.nextInt(360));
+        asteroid.setType("asteroid");
         return asteroid;
     }
 }

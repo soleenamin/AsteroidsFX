@@ -28,6 +28,7 @@ public class AsteroidSpawner implements IEntityProcessingService {
         int size = random.nextInt(10) + 5;
         a.setRadius(size);
         a.setPolygonCoordinates(size, -size, -size, -size, -size, size, size, size);
+        a.setType("asteroid");
 
         // pick a random edge to spawn on
         double w = gameData.getDisplayWidth();

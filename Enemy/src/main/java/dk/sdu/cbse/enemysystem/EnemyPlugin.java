@@ -29,6 +29,7 @@ public class EnemyPlugin implements IGamePluginService {
             default:e.setX(w);                e.setY(Math.random()*h);     // right
         }
         e.setRadius(12);
+        e.setType("enemy");
         return e;
     }
 

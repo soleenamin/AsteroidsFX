@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/Player/src/test/java/dk/sdu/cbse/playersystem/PlayerControlSystemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mods-mvn/Map-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Player/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +20,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Class" />
         <option value="Interface" />
         <option value="module-info" />
-        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -45,26 +39,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "TestLab",
-    "jdk.selected.JAVA_MODULE": "temurin-21",
-    "last_opened_file_path": "C:/Users/Bruger/OneDrive/Dokumenter/Komponentbaseret systemer/AsteroidsFX/Map/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bruger/OneDrive/Dokumenter/Komponentbaseret systemer/AsteroidsFX/Map/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Map\src\main\resources" />
@@ -73,10 +67,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\mods-mvn" />
+      <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\removed components" />
+      <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\disabled components" />
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Map\src\main\resources" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="dk.sdu.cbse.playersystem" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dk.sdu.cbse.services" />
@@ -88,10 +81,9 @@
       <command value="mvn clean" />
       <command value="mvn clean install" />
       <command value="mvn exec:exec" />
-      <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PlayerControlSystemTest">
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.App" />
       <module name="Core" />
@@ -105,75 +97,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerControlSystemTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Player" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dk.sdu.cbse.playersystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dk.sdu.cbse.playersystem" />
-      <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.playersystem.PlayerControlSystemTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerControlSystemTest.testPlayerMovesUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Player" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dk.sdu.cbse.playersystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dk.sdu.cbse.playersystem" />
-      <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.playersystem.PlayerControlSystemTest" />
-      <option name="METHOD_NAME" value="testPlayerMovesUp" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerControlSystemTest.testPlayerTurnsLeft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Player" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dk.sdu.cbse.playersystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dk.sdu.cbse.playersystem" />
-      <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.playersystem.PlayerControlSystemTest" />
-      <option name="METHOD_NAME" value="testPlayerTurnsLeft" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerControlSystemTest.testPlayerTurnsRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Player" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dk.sdu.cbse.playersystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dk.sdu.cbse.playersystem" />
-      <option name="MAIN_CLASS_NAME" value="dk.sdu.cbse.playersystem.PlayerControlSystemTest" />
-      <option name="METHOD_NAME" value="testPlayerTurnsRight" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerControlSystemTest" />
-        <item itemvalue="JUnit.PlayerControlSystemTest.testPlayerTurnsRight" />
-        <item itemvalue="JUnit.PlayerControlSystemTest.testPlayerTurnsLeft" />
-        <item itemvalue="JUnit.PlayerControlSystemTest.testPlayerMovesUp" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -222,6 +148,7 @@
       <workItem from="1748417393809" duration="2016000" />
       <workItem from="1748443792018" duration="1692000" />
       <workItem from="1748469205201" duration="450000" />
+      <workItem from="1748798279589" duration="3838000" />
     </task>
     <task id="LOCAL-00001" summary="Lecture 1 - Maven and JPMS setup">
       <option name="closed" value="true" />
@@ -263,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748519890965</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix">
+      <option name="closed" value="true" />
+      <created>1748801307567</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748801307567</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

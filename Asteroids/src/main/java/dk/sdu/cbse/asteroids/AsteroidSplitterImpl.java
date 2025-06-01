@@ -27,6 +27,7 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
             child.setY(parent.getY() + Math.sin(angle) * offset);
             // Give each child a random rotation (trajectory)
             child.setRotation((float) (random.nextDouble() * 360));
+            child.setType("asteroid");
             // If you have a setSpeed or velocity, randomize it here too!
             world.addEntity(child);
             System.out.println("Child asteroid spawned at X=" + child.getX() + ", Y=" + child.getY() + ", radius=" + child.getRadius());

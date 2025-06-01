@@ -12,7 +12,17 @@ public class Entity implements Serializable {
     private double y;
     private double rotation;
     private float radius;
-            
+
+    // In Entity.java (in Common module)
+    private String type;
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
 
     public String getID() {
         return ID.toString();

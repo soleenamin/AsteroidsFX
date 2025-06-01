@@ -45,6 +45,7 @@ public class EnemyControlSystem implements IEntityProcessingService {
                         .findFirst()
                         .ifPresent(spi -> world.addEntity(
                                 spi.createBullet(en, gameData)
+
                         ));
             }
         }
