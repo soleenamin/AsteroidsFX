@@ -23,6 +23,7 @@ public class PlayerPlugin implements IGamePluginService {
         p.setX(gameData.getDisplayWidth() / 2.0);
         p.setY(gameData.getDisplayHeight() / 2.0);
         p.setRadius(16);            // doubled
+        p.setType("player");
         return p;
     }
 

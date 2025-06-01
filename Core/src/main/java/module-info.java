@@ -3,10 +3,7 @@ module Core {
     requires CommonBullet;
     requires javafx.graphics;
     requires javafx.controls;
-    requires Enemy;
-    requires Map;
     requires CommonAsteroids;
-    requires Player;
     requires CommonEnemy;
     requires CommonPlayer;
     requires CommonMap;

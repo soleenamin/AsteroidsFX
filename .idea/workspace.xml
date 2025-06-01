@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="fix">
+    <list default="true" id="5f7a2c27-8aa8-48e1-b3be-7f1aabb663be" name="Changes" comment="microservice">
+      <change afterPath="$PROJECT_DIR$/mods-mvn/Map-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSpawner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/cbse/asteroids/AsteroidSplitterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/src/main/java/dk/sdu/cbse/collisionsystem/CollisionDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/src/main/java/dk/sdu/cbse/collisionsystem/CollisionDetector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/cbse/bulletsystem/BulletControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/cbse/bulletsystem/BulletControlSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/data/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/cbse/common/data/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/cbse/core/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyControlSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/cbse/enemysystem/EnemyPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/cbse/playersystem/PlayerPlugin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +78,7 @@
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\mods-mvn" />
       <recent name="C:\Users\Bruger\OneDrive\Dokumenter\Komponentbaseret systemer\AsteroidsFX\Map\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -148,6 +158,7 @@
       <workItem from="1748417393809" duration="2016000" />
       <workItem from="1748443792018" duration="1692000" />
       <workItem from="1748469205201" duration="450000" />
+      <workItem from="1748798279589" duration="2854000" />
     </task>
     <task id="LOCAL-00001" summary="Lecture 1 - Maven and JPMS setup">
       <option name="closed" value="true" />

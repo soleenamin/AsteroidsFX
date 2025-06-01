@@ -1,13 +1,10 @@
 package dk.sdu.cbse.core;
 
-import dk.sdu.cbse.common.asteroids.Asteroid;
-import dk.sdu.cbse.common.bullet.Bullet;
+
 import dk.sdu.cbse.common.data.Entity;
 import dk.sdu.cbse.common.data.GameData;
 import dk.sdu.cbse.common.data.GameKeys;
 import dk.sdu.cbse.common.data.World;
-import dk.sdu.cbse.common.enemy.Enemy;
-import dk.sdu.cbse.common.player.Player;
 import dk.sdu.cbse.common.services.IEntityProcessingService;
 import dk.sdu.cbse.common.services.IGamePluginService;
 import dk.sdu.cbse.common.services.IPostEntityProcessingService;
@@ -153,24 +150,23 @@ public class App extends Application {
                 polygons.put(entity, polygon);
                 gameWindow.getChildren().add(polygon);
             }
-
-            // Color only enemy ship red
-            if (entity instanceof Enemy) {
-                polygon.setFill(Color.RED);
-             }
-
-            // Color Asteroids grey
-            if (entity instanceof Asteroid) {
-                polygon.setFill(Color.LIGHTGREY);
+            String type = entity.getType();
+            if (type == null) {
+                System.err.println("Entity missing type: " + entity.getClass().getSimpleName());
+                polygon.setFill(Color.WHITE);
+            } else {
+                switch (type) {
+                    case "enemy" -> polygon.setFill(Color.RED);
+                    case "asteroid" -> polygon.setFill(Color.LIGHTGREY);
+                    case "player" -> polygon.setFill(Color.LIGHTPINK);
+                    case "bullet" -> polygon.setFill(Color.GRAY);
+                    default -> {
+                        System.err.println("Unknown entity type: " + type);
+                        polygon.setFill(Color.WHITE);
+                    }
+                }
             }
 
-            if (entity instanceof Player) {
-                polygon.setFill(Color.LIGHTPINK);
-            }
-
-            if (entity instanceof Bullet) {
-                polygon.setFill(Color.GRAY);
-            }
             polygon.setTranslateX(entity.getX());
             polygon.setTranslateY(entity.getY());
             polygon.setRotate(entity.getRotation());
